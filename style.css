@@ -1,0 +1,445 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* setting the scrolling on clicking on menu items */
+/* we have add id's to menu items links that we have to scroll */
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: black;
+    color: white; /* text color */
+     }
+
+#header{
+    width: 100%;
+    height: 100vh;
+    /* background-image: url(images/img1.JPG); */
+    background-size: cover; /* accomoding the img in screen */
+    background-position: center;
+}
+
+.container{
+    padding: 10px 10%;
+}
+
+nav{
+    display: flex; /*links and logo comes side by side */
+    align-items: center; /* aligning both items in same center line */
+    justify-content: space-between; /* making left item on left side and right item on right side */
+    flex-wrap: wrap;
+}
+.logo{
+    height: 8vw;
+    width: 25vw;
+}
+
+nav ul li{
+    display: inline-block; /* all item will be horizontali align */
+    list-style: none; /* removing .s of the list */
+    margin: 10px 20px; /*10px from top and bottom and 20px from left and right */
+}
+
+nav ul li a{
+    color: white;
+    text-decoration: none;  /* removing underline */
+    font-size: 18px;
+    position: relative;
+}
+nav ul li a::after{  /* making the color lines */
+    content: '';
+    width: 0; /* we set 0 because it should be initially hidden */
+    height: 3px;
+    background-color:red;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s; /* for making animation */
+}
+
+nav ul li a:hover::after{
+    width: 100%;
+}
+
+.header-text{
+    margin-top: 20%;
+    font-size: 30px;
+}
+.header-text h1{
+    font-size: 60px;
+    margin-top: 20px;
+}
+.header-text h1 span{
+    color: red;
+}
+
+
+/* --------------------About-------------------- */
+#about{
+    padding: 80px 0; /*80px from top and bottom and 0 from left and right */
+    color: white;
+}
+
+.row{
+    display: flex; /* we get the two columns side by side */
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.about-col-1{
+    flex-basis: 35%; /* means width of col will be 35% */
+}
+
+.about-col-1 img{
+    height: 350px;
+    width: 250px;
+    border-radius: 15px;
+}
+
+.about-col-2{
+    flex-basis: 60%; 
+    /* we put 35 from col1 and 60 for col2 and remaining 5 will be space between them */
+}
+
+.sub-title{
+    font-size: 60px;
+    font-weight: 600px;
+    color: white;
+}
+
+.tab-titles{
+    display: flex;
+    margin: 20px 0 40px; /*20px from top and 0px from left and right and 40px from bottom */
+
+}
+
+.tab-links{
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+
+.tab-links::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background-color: red;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s;
+}
+
+.tab-links.active-link::after{
+     width: 50%;
+}
+.tab-contents ul li{
+    list-style: none;
+    margin: 10px 0; /* 10px from top and bottom and 0px from left and right */
+
+}
+.tab-contents ul li span{
+    font-size: 14px;
+    color: rgb(247, 74, 74);
+}
+.tab-contents{  /* initially we hides all the contents */
+    display: none;
+}
+
+.tab-contents.active-tab{
+    display: block;  /* now it will be visible */
+}
+
+/* --------------------------services------------------------------ */
+#servies{
+    padding: 30px 0px;  /* 30px from top and bottom and 0px from left and right */
+}
+
+.services-list{  /* making the grid of servies list */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+
+.services-list div{  /* designing each grid */
+    background: rgb(43, 40, 40);
+    padding: 40px;
+    font-size: 13px;
+    font-weight: 300;
+    border-radius: 10px;
+    transition: background 0.5s, transform 0.5s; /* time for transition effect when we hover it */
+}
+
+.services-list div:hover{
+    transform: translateY(-10px); /* when we hover it, it moves up by 10px */
+    background-color: rgb(232, 46, 46);
+}
+
+.services-list div i{  /* designing the icons */
+    font-size: 50px;
+    margin-bottom: 30px;
+
+}
+
+.services-list div h2{  /* designing the services title */
+  font-size: 30px;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+
+.services-list div a{
+    text-decoration: none;
+    color: white;
+    font-size: 12;
+    margin-top: 20px;
+    display: inline-block;
+}
+
+/* ---------------------portfolio----------------- */
+
+
+#portfolio{
+    padding: 50px 0;
+}
+
+.work-list{  /* making the grid of work list */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+
+.work{
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.work img{
+    width: 300px;
+    height: 320px;
+    border-radius: 10px;
+    display: block;
+    transition: transform 0.5s; /* setting time for zoomming */
+}
+
+.work:hover img{ /*when we hovering on image it will be zoom out */
+   transform: scale(1.1); 
+}
+
+.layer{
+    width: 100%;
+    height: 0;  /* initially we are hiding all the layer content */
+    border-radius: 10px;
+    background: linear-gradient(rgb(222, 153, 153), #ff0051); /* making gradient */
+    opacity: 0.7;
+    position: absolute;  /* putting the text in the image */
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 40px;
+    text-align: center;
+    font-size: 14px;
+    transition: height 0.5s; /* timing for showing layer after hovering, it will come from bottom */
+}
+.work:hover .layer{ /* displaying the hover content when we hovering it */
+    height: 100%;
+}
+
+.layer h3{  /* styling the title of layer(text on the img ) */
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.layer a{
+    margin-top: 20px;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 60px;
+    background-color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;  /* by 50% it will be a circle  */
+    text-align: center;
+}
+
+.btn{  /* button on the services */
+    display: block;
+    margin: 15px auto; /* 15px from top and bottom and center at left and right */
+    width: fit-content;  /* autmatic width according to the content */
+    border: 1px solid rgb(237, 25, 25);
+    padding: 14px 50px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: white;
+    transition: background 0.3s;
+}
+
+.btn:hover{
+   background: rgb(242, 47, 47);
+}
+
+/* --------------------- Contact --------------------  */
+.contact-left{
+    flex-basis: 35%; /* setting the width of 35% */
+}
+
+.contact-left p{
+    margin-top: 30px;
+}
+
+.contact-left p i{ /* designing the icon of email and phone  */
+    color: white;
+    margin-right: 15px;
+    font-size: 25px;
+}
+.social-icons{ /* designing the social icons */
+    margin-top: 30px;
+}
+
+.social-icons a{
+    text-decoration: none;
+    font-size: 30px;
+    margin-right: 15px;
+    color: white;
+    display: inline-block; /* all the icons come in horizontal line */
+    transition: transform 0.5s;
+}
+.social-icons a:hover{
+    color: rgb(230, 38, 38);
+    transform: translateY(-5px);
+}
+
+.btn.btn2{
+    display: inline-block;
+    background-color: rgb(227, 30, 30);
+}
+
+.contact-right{
+    flex-basis: 60%; 
+}
+.contact-right form{
+    width: 100%;
+
+}
+form input, form textarea{
+    width: 100%;
+    border: 0; /*removing initial border */
+    outline: none; /*removing initial outline */
+    background-color: rgb(51, 47, 47);
+    padding: 15px;
+    margin: 15px 0;
+    color: white;
+    font-size: 18px;
+    border-radius: 6px;
+}
+
+form .btn2{  /*form button */
+    padding: 14px 60px;
+    font-size: 18px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.copyright{
+    width: 100%;
+    text-align: center;
+    padding: 25px 0;
+    font-weight: 300;
+    margin-top: 20px;
+    background-color: rgb(36, 35, 35);
+}
+
+
+/* ---------------- CSS for small screen----------------- */
+/* what ever css properties we write inside this that will applicable only for with screen 0px to 600px */
+/* which ever class see like it is not proper that we rewrite it */
+
+/* for large screen we hide the menu icons */
+nav .fas{
+    display: none; 
+}
+
+
+@media only screen and (max-width : 600px){
+    /* ----------------------------- Header for small screen------------------------------------------- */
+    .header-text{
+        /* margin-top: 100%; */
+        font-size: 16px;
+    }
+    .header-text h1{
+        font-size: 30px;
+        margin-top: 20px;
+    }
+     
+    /* menu icons */ /* displaying for small screen */
+    nav .fas{
+       display: block;
+       font-size: 25px;
+    }
+    nav ul{
+        position: fixed;
+        top: 0;
+        right: -200px; /*initially we hides the menu on clicking icon we will display it */
+        background: rgb(218, 37, 37);
+        width: 200px;
+        height: 100vh;
+        padding-top: 50px;
+        transition: right 0.5s; /* trasition for come of menu from right side */
+    }
+    nav ul li{ /* arranging the menu(list) items vertically */
+        display: block; 
+        margin: 25px;
+    }
+    nav ul .fas{ /* we are arranging the close icon */
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
+    }
+
+    /* -------------------------------------About for small screen--------------------------------------- */
+    .sub-title{
+        font-size: 40px;
+        font-weight: 500px;
+    }
+
+    .about-col-1, .about-col-2{ /* making full of two columsn */
+        flex-basis: 100%;
+    }
+    .about-col-1{
+        margin-bottom: 30px; /*putting some margine below the text */
+    }
+    .about-col-2{  /* decreasing the font size of col2 */
+        font-size: 14px;
+    }
+    .tab-links{
+        font-size: 16px;
+        margin-right: 20px;
+    }
+
+
+    /* -------------------------------------Contact for small screen--------------------------------------- */
+    .contact-left, .contact-right{
+        flex-basis: 100%;
+    }
+
+
+    .copyright{
+        font-size: 14px;
+        padding: 20px 0;
+    }
+
+
+}

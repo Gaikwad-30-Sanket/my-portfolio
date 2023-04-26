@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>  Sanket Gaikwad</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="images/favicon.jpeg">
+    <!-- <i class="fa-solid fa-mobile-retro"></i> -->
+    <script src="https://kit.fontawesome.com/a98bf563b2.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<!-- -----------------------Header------------- -->
+    <div id="header">
+         <div class="container">
+              <nav>
+                <img src="images/logo.jpg" class="logo" alt="">
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#servies">Services</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fa-solid fas fa-xmark" onclick="closemenu()" ></i> <!--icon taken from fontawesome-->
+                  </ul>
+                  <i class="fa-solid fas fa-bars" onclick="openmenu()"></i>
+              </nav>
+              <div class="header-text">
+                <p>UI/UX Designer</p>
+                <h1>Hi, I'm <span>Sanket Gaikwad</span> <br> from India</h1>
+              </div>
+              
+         </div>
+    </div>
+    <!-- ------------------------------About------------------------------- -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/img2.jpg" alt="">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>Hello, I am Sanket Gaikwad from Third Year Information Technology studing in Shri Guru gobind singhji institute of Engineering and Technology nanded.</p>
+
+                    <div class="tab-titles">
+                        <p  class="tab-links  active-link" onclick="opentab('skills')">Skills</p>
+                        <p  class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p  class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+
+                    <div class="tab-contents active-tab" id="skills"> <!-------------Skills------------>
+                        <ul>
+                            <li><span>UI/UX</span><br> Designing Web/App interfaces</li>
+                            <li><span>Web Development</span><br> Web app Development</li>
+                            <li><span>App Development</span><br> Building Android/iOS apps</li>
+                        </ul>
+                    </div>
+
+                    <div class="tab-contents" id="experience"> <!-------------Experience------------>
+                        <ul>
+                            <li><span>teaching</span><br> Designing Web/App interfaces</li>
+                            <li><span>C++</span><br> Web app Development</li>
+                            <li><span>Java</span><br> Building Android/iOS apps</li>
+                        </ul>
+                    </div>
+
+                    <div class="tab-contents" id="education"> <!-------------Education------------>
+                        <ul>
+                            <li><span>2018</span><br> 10th from sskv wardha</li>
+                            <li><span>2020</span><br>12th from Jagdambha Yavatmal</li>
+                            <li><span>2024</span><br> Engineering from sggs Nanded</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ---------------------------------services----------------------------------- -->
+
+    <div id="servies">
+        <div class="container">
+            <h1 class="sub-title">My Services</h1> <!--Taken from about section-->
+            <div class="services-list">
+                <div>
+                    <h2>Web Design</h2>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Neque accusantium vitae libero eveniet eligendi non magni ipsum maiores quae harum.</p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div>
+                    <h2>UI/UX Design</h2>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Neque accusantium vitae libero eveniet eligendi non magni ipsum maiores quae harum.</p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div>
+                    <h2>App Design</h2>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Neque accusantium vitae libero eveniet eligendi non magni ipsum maiores quae harum.</p>
+                    <a href="#">Learn more</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- --------------------------------------portfolio----------------------------- -->
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">My Work</h1> <!--Taken from about section-->
+            <div class="work-list">
+                <div class="work">
+                    <img src="images/img2.jpg" >
+                    <div class="layer">
+                        <h3>Social Media App</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam sunt nulla</p>
+                        <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a> <!-- You have to add icon at the place of @-->
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/img2.jpg" >
+                    <div class="layer">
+                        <h3>Music App</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam sunt nulla</p>
+                        <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a> <!-- You have to add icon at the place of @-->
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/img2.jpg" >
+                    <div class="layer">
+                        <h3>Online Shopping App</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam sunt nulla</p>
+                        <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a> <!-- You have to add icon at the place of @-->
+                    </div>
+                </div>
+            </div>
+            <a href="#" class="btn">See more</a> <!--Adding the botton-->
+        </div>
+    </div>
+
+    <!-- ------------------------------------contact------------------------------ -->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1> <!--Taken from about section-->
+                    <p> <i class="fa-solid fa-envelope"></i>  gaikwad30sanket@gmail.com</p>  <!--add the icon for phone and email-->
+                    <p> <i class="fa-solid fa-mobile-retro"></i> 8390380207</p>
+                    <div class="social-icons"> <!--social media apps-->
+                        <a href=""><i class="fa-brands fa-facebook"></i></a> <!-- we need to add icon here-->
+                        <a href=""><i class="fa-brands fa-linkedin"></i></a> <!-- we need to add icon here-->
+                        <a href=""><i class="fa-brands fa-square-github"></i></a> <!-- we need to add icon here-->
+                        <a href=""><i class="fa-brands fa-instagram"></i></a> <!-- we need to add icon here-->
+                    </div>
+                    <!-- Resume file present in resume folder-->
+                    <!--we need to write download keyword in order to download It-->
+                    <a href="images/Sanket Resume.pdf" download class="btn btn2">Download Resume</a> <!--btn is already defined btn2 for setting position-->
+
+                </div>
+                <div class="contact-right">
+                    <form action="">
+                        <input type="text" name="email" placeholder="Your Name" required> <!--required shows it is compulsory-->
+                        <input type="email" name="email" placeholder="Your Email" required>
+                        <textarea name="message" cols="30" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>Copyright 2023 Sanket Gaikwad. All rights reserved.</p>
+    </div>
+</body>
+
+<!-- //----------------------------- script for About----------------------------------------- -->
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link")
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab")
+        }
+        event.currentTarget.classList.add("active-link") /*on which we are clicking there active-link class is adding */
+        document.getElementById(tabname).classList.add("active-tab") /* it shows the clicked skills contents */
+
+    }
+</script>
+
+<!-- ----------------------------------script for side menu------------------------------ -->
+<script>
+    var sidemenu = document.getElementById('sidemenu')
+
+    function openmenu(){
+        // whenever right wil 0 it will be visible
+        sidemenu.style.right = "0";
+    }
+    function closemenu(){
+        // whenever we have to close it we do right -200px
+        sidemenu.style.right = "-200px"
+    }
+</script>
+</html>
